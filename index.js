@@ -10,6 +10,11 @@ import client from "./clientConfig.js";
 import "dotenv/config";
 const app = express();
 app.use(cors());
+app.use(function (req, res, next) { 
+         res.header("Access-Control-Allow-Origin", "*"); 
+         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); 
+         next(); 
+ })
 var storage = multer.memoryStorage();
 var upload2 = multer({ storage: storage });
 app.use(bodyParser.urlencoded({ extended: true }));
