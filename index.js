@@ -181,7 +181,7 @@ const fetchImage = async function (req, res) {
     .withLimit(limit)
     .do();
   // console.log(resImage);
-  const result = resImage.data.Get[url][0].image;
+  //const result = resImage.data.Get[url][0].image;
   const res2 = resImage.data.Get[url];
   // console.log(res2);
   var images = [];
